@@ -11,7 +11,6 @@ require("dotenv").config({ path: path.join(__dirname, "/.env") });
 module.exports = {
   entry: "./src/index.js",
   devtool: process.env.NODE_ENV === "development" ? "eval-source-map" : false,
-
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "/",

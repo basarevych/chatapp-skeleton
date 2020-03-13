@@ -1,0 +1,8 @@
+html,
+body,
+#chatRootElem,
+#chatRootElem > .chatApp {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

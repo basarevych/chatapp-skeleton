@@ -1,5 +1,5 @@
 module.exports = {
-  prefix: "chatapp-",
+  prefix: "chatApp-",
   theme: {
     extend: {},
   },

@@ -14,10 +14,10 @@ function getParameterByName(name) {
 
 const App = ({ title }) => {
   return (
-    <>
-      <div className="chatapp-bg-gray-300 chatapp-p-2">{title}</div>
+    <div className="chatApp chatApp-bg-gray-200">
+      <div>{title}</div>
       <div>API KEY: {getParameterByName("api_key")}</div>
-    </>
+    </div>
   );
 };
 

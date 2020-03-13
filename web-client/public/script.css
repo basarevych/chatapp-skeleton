@@ -1,0 +1,7 @@
+#chatRootElem > .chatApp {
+  position: fixed;
+  width: 300px;
+  height: 500px;
+  bottom: 15px;
+  right: 15px;
+}
