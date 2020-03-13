@@ -3,7 +3,7 @@
 ## Initialization
 
 ```
-cd api-client
+cd api-server
 yarn
 cp .env.example .env
 
