@@ -7,7 +7,7 @@
     "lint": "eslint .",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --port 5000 --mode development",
     "analyze": "cross-env ANALYZE=1 yarn build",
-    "build": "cross-env NODE_ENV=production webpack --mode production && cross-env NODE_ENV=production postcss public/init.css --output dist/init.css"
+    "build": "cross-env NODE_ENV=production webpack --mode production && cross-env NODE_ENV=production postcss public/*.css -d dist"
   },
   "dependencies": {
     "@americanexpress/purgecss-loader": "~1.0.0",
