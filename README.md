@@ -39,7 +39,7 @@ Change **localhost:3000** below to your API server address
   Add to the body of your page:
 
   ```
-  <iframe src="http://localhost:3000/iframe.html?api_key=12345"></iframe>
+  <iframe src="http://localhost:3000/iframe.html?api_key=12345" width="300" height="500" frameborder="0"></iframe>
   ```
 
 ## Run Development
