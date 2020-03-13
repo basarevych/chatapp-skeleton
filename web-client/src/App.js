@@ -7,7 +7,7 @@ const socket = socketIOClient(process.env.API_SERVER_URL);
 axios.get(process.env.API_SERVER_URL).then(console.log);
 
 function getParameterByName(name) {
-  if (window.CHAT_PARAMS[name]) return window.CHAT_PARAMS[name];
+  if (window.__CHATAPP && window.__CHATAPP[name]) return window.__CHATAPP[name];
   var match = RegExp("[?&]" + name + "=([^&]*)").exec(window.location.search);
   return match && decodeURIComponent(match[1].replace(/\+/g, " "));
 }
@@ -15,7 +15,7 @@ function getParameterByName(name) {
 const App = ({ title }) => {
   return (
     <>
-      <div className="chat-bg-gray-300 chat-p-2">{title}</div>
+      <div className="chatapp-bg-gray-300 chatapp-p-2">{title}</div>
       <div>API KEY: {getParameterByName("api_key")}</div>
     </>
   );
