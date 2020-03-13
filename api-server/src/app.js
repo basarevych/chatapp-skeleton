@@ -1,6 +1,12 @@
-const app = require("express")();
-const http = require("http").createServer(app);
-const io = require("socket.io")(http);
+const path = require("path");
+const express = require("express");
+const http = require("http");
+
+require("dotenv").config({ path: path.join(__dirname, "..", "/.env") });
+
+const app = express();
+const server = http.createServer(app);
+const io = require("socket.io")(server);
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -8,14 +14,12 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get("/", function(req, res) {
-  res.send("<h1>Hello world</h1>");
-});
+app.use(express.static(path.resolve(process.env.DIST_DIR)));
 
 io.on("connection", function(socket) {
   console.log("a user connected");
 });
 
-http.listen(3000, function() {
+server.listen(3000, function() {
   console.log("listening on *:3000");
 });
